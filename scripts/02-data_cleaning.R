@@ -1,11 +1,11 @@
 #### Preamble ####
 # Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Dongli Sun
+# Date: 26 March 2024
+# Contact: dongli.sun@utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+# Any other information needed? 
 
 #### Workspace setup ####
 library(tidyverse)
@@ -19,12 +19,12 @@ cleaned_data <-
   select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
   filter(wing_width_mm != "caw") |>
   mutate(
-    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,35",
-                                   "1.35",
+    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,40",
+                                   "1.40",
                                    flying_time_sec_first_timer)
   ) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "490",
-                                 "49",
+  mutate(wing_width_mm = if_else(wing_width_mm == "500",
+                                 "430",
                                  wing_width_mm)) |>
   mutate(wing_width_mm = if_else(wing_width_mm == "6",
                                  "60",
