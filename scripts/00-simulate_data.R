@@ -1,19 +1,21 @@
 #### Preamble ####
-# Purpose: Simulates... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Simulates data with safari
+# Author: Dongli SUn[...UPDATE THIS...]
+# Date: 26 March 2024
+# Contact: dongli.sun@utoronto.ca 
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+# Any other information needed? 
 
 
 #### Workspace setup ####
 library(tidyverse)
-# [...UPDATE THIS...]
+library(gdata)
+library(cwhmisc)
+
 
 #### Simulate data ####
-# [...ADD CODE HERE...]
+rawData<-read.csv("movies.csv", na.strings="#N/A")
 
 
 
